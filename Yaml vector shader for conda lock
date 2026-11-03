@@ -1,0 +1,23 @@
+name: spectral-vector-shader-stack
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  
+  # --- Spectral Data Engines ---
+  - bioconductor-spectra  # Mass spectrometry / spectral backend pipeline
+  
+  # --- Vector / Geospatial Engines ---
+  - shapely>=2.0
+  - fiona
+  - pyproj
+  - bioconductor-spatialfeatureexperiment  # Unified spatial & vector tracking
+  
+  # --- Shaders & Hardware Acceleration ---
+  - pyopengl              # Python binding for OpenGL shader passing
+  - vispy                 # Fast GPU-accelerated visualization via shaders
+  - matplotlib-base       # Matrix diagnostics & static profiling
